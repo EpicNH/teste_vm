@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{item.Name}}</ion-title>
+
+        <ion-buttons end>
+            <button ion-button (click)="editToggle()">
+                <ion-icon name="create" style="font-size: 22px;" ></ion-icon>
+            </button>
+        </ion-buttons>
+
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+    <div class="container">
+        <ion-avatar item-center>
+            <img class="avatar" src="http://fuuse.net/wp-content/uploads/2016/02/avatar-placeholder.png">
+        </ion-avatar>
+
+        <ion-item *ngFor="let key of item | NonPrivateKeys" >
+            <ion-label *ngIf="key !== '_id'" stacked>{{ key }}</ion-label>
+            <!-- <ion-input *ngIf="key !== '_id'" type="tel" [disabled]="!editing" [(ngModel)]="item[key]" [placeholder]="key" (focusout)="updateContact()"></ion-input> -->
+            <ion-input *ngIf="key !== '_id'" type="tel" [disabled]="!editing" [(ngModel)]="item[key]" [placeholder]="key"></ion-input>
+        </ion-item>    
+
+        <div class="btn">
+            <button  ion-button [disabled]="!editing" color="danger" (click)="handleDeleteClick()" full>delete contact</button>   
+        </div>
+
+    </div>
+
+
+   
+
+
+</ion-content>
