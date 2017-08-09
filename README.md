@@ -1,4 +1,4 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# Lista de contatos simples. IONIC 2 + Angular 2;
 
 ## DONE:
   * REST API ( https://rest-teste-vm.herokuapp.com/contacts );
@@ -19,8 +19,7 @@ This is a starter template for [Ionic](http://ionicframework.com/docs/) projects
 ## TODO:
   * ADD and CONTACT SCREEN:
     * FIELD/FORM VALIDATION;
-  
-  
-  
-
-
+    
+## CONTABILIDADE
+  * DIAS SEM DORMIR: 3;
+  * LATAS DE ENERGETICO: 6;
