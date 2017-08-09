@@ -1,6 +1,6 @@
 <ion-header>
-    <ion-navbar>
-        <ion-title>{{item.Name}}</ion-title>
+    <ion-navbar>        
+        <ion-title>{{item.name.data}}</ion-title>
 
         <ion-buttons end>
             <button ion-button (click)="editToggle()">
@@ -20,9 +20,9 @@
         </ion-avatar>
 
         <ion-item *ngFor="let key of item | NonPrivateKeys" >
-            <ion-label *ngIf="key !== '_id'" stacked>{{ key }}</ion-label>
-            <!-- <ion-input *ngIf="key !== '_id'" type="tel" [disabled]="!editing" [(ngModel)]="item[key]" [placeholder]="key" (focusout)="updateContact()"></ion-input> -->
-            <ion-input *ngIf="key !== '_id'" type="tel" [disabled]="!editing" [(ngModel)]="item[key]" [placeholder]="key"></ion-input>
+            <ion-label stacked>{{ key }}</ion-label>           
+            <ion-input [disabled]="!editing" [(ngModel)]="item[key].data" *ngIf="item[key].type === 'text'" type="text"  [placeholder]="item[key].placeholder || key"></ion-input>
+            <ion-datetime [disabled]="!editing"  [(ngModel)]="item[key].data" *ngIf="item[key].type === 'date'" displayFormat="DD MMM YYYY" ></ion-datetime>
         </ion-item>    
 
         <div class="btn">

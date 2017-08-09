@@ -28,7 +28,7 @@ export class ContactPage implements OnInit {
 
         this.connectionAlert = {
             title: 'Connection!',
-            subTitle: 'Cannot this action. Try again later!',
+            subTitle: 'Cannot do this action. Try again later!',
             buttons: [{
                 text: 'OK!',
                 // handler: () => { }

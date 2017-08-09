@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController, AlertController } from 'ionic-angular';
+
+// SERVICES
 import { RESTService } from "../../app/services/REST/rest.service";
+
+// PAGES
 import { ContactPage } from "../contact/contact";
+import { AddPage } from "../add/add";
 
 @Component({
     selector: 'page-home',
@@ -83,13 +88,17 @@ export class HomePage {
         // if the value is an empty string don't filter the items
         if (val && val.trim() != '') {
             this.items = this.src_items.filter(item => {
-                return item.Name.toLowerCase().includes(val.toLowerCase())
+                return item.name.data.toLowerCase().includes(val.toLowerCase())
             })
         }
     }
 
-    click(item) {
+    contactClickHandler(item) {
         this.navCtrl.push(ContactPage, { item: item })
+    }
+
+    addContactClickHandler () {
+         this.navCtrl.push(AddPage)        
     }
 
     refresh(ev) {

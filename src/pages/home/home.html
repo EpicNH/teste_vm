@@ -14,13 +14,18 @@
     </ion-refresher>
 
     <ion-list no-lines>
-        <button ion-item *ngFor="let item of items" (click)="click(item)">
+        <button ion-item *ngFor="let item of items" (click)="contactClickHandler(item)">
             <ion-avatar item-start>
                  <img src="http://fuuse.net/wp-content/uploads/2016/02/avatar-placeholder.png">                 
             </ion-avatar>
-            <h2>{{item.Name}}</h2>
-            <p>Tel: {{item.Telephone}}</p>
+            <h2>{{item.name.data}}</h2>
+            <p>Tel: {{item.phone.data}}</p>
         </button >
     </ion-list>
+ 
+    <ion-fab right bottom>
+        <button ion-fab (click)="addContactClickHandler()" ><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+
 
 </ion-content>

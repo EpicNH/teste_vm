@@ -6,7 +6,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 export class RESTService {
 
-    private url: string = `http://localhost:3000/contacts`;
+    private url: string = `https://rest-teste-vm.herokuapp.com/contacts`;
     private headers: Headers = new Headers({ 'Content-Type': 'application/json' });
     private options = new RequestOptions({ headers: this.headers });
 
