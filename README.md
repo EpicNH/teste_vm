@@ -1,4 +1,4 @@
-# Lista de contatos simples. IONIC 2 + Angular 2;
+# Lista de contatos simples. IONIC 2 + Angular 2, para o teste;
 
 ## DONE:
   * REST API ( https://rest-teste-vm.herokuapp.com/contacts );
